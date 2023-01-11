@@ -13,7 +13,7 @@ app.use((_req, res) => res.sendFile(INDEX, { root: __dirname }))
 
 const io = socket(server, {
     cors: {
-        origin: 'https://tic-tac-toe-client-sigma.vercel.app'
+        origin: 'https://tic-tac-toe-lqhf.onrender.com'
     }
 });
 
