@@ -7,6 +7,7 @@ const PORT = 5000;
 const INDEX = '/index.html';
 
 const app = express()
+const server = app.listen(PORT, () => console.log(`Listening on http://localhost:${PORT}...`));
 
 app.use((_req, res) => res.sendFile(INDEX, { root: __dirname }))
 
@@ -37,4 +38,3 @@ io.on('connection', (socket) => {
     })
 });
 
-const server = app.listen(PORT, () => console.log(`Listening on http://localhost:${PORT}...`));
